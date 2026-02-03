@@ -7,12 +7,23 @@ import os
 
 from . import app
 
+#Directory where non-template files are searched
+#Those paths are not checked
+#They will be first searched in FRONTEND, and then in the entry of FRONTEND_SPECIFIC
 FRONTEND = os.path.join(os.path.dirname(__file__), "..")
+#Map of file extensions to directories, relative to FRONTEND
 FRONTEND_SPECIFIC = {"js": "js", "css": "css", "html": "static"}
 
+#The name of the 404 page template
 TEMPLATE_404 = "404.html"
-PAGE_404 = os.path.join(FRONTEND, "404.html")
 
+#Add here all the pages that have a different endpoint from the page name
+@app.route("/")
+def main_page():
+	return render_template("index.html")
+
+#Handles all pages not generated dynamically
+#Will return the page if found, else the TEMPLATE_404 template will be returned to the client
 @app.errorhandler(404)
 def load_static(e):
 	paths = set()
@@ -32,7 +43,4 @@ def load_static(e):
 		if(os.path.exists(path)):
 			return send_file(path)
 
-	try:
-		return render_template(TEMPLATE_404), 404
-	except:
-		return send_file(PAGE_404), 404
+	return render_template(TEMPLATE_404), 404

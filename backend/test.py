@@ -1,6 +1,6 @@
 from . import app
 
-@app.route("/")
+#A testing endpoint
 @app.route("/test")
 def test():
 	return "Hello world"
