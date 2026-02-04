@@ -72,3 +72,56 @@ git push origin feature/your-branch-name-short-description
 ### 6. Remove your branch after merge:
 
 Once your pull request is approved and merged, clean up your branch.
+
+---
+
+## Run the webserver
+
+#### 1. Install python and pip
+
+1. Install python
+   * Windows: ``winget python``
+   * Linux (debian/ubuntu): ``apt install python3``
+
+2. Install pip
+``python -m pip install``
+
+#### 2. (Optional) install and activate venv
+
+1. Install venv
+``python -m pip install venv``
+
+2. Change directory to the backend
+``cd backend``
+
+3. Create the virtual environment
+``python -m venv .venv``
+ 
+   _tip: to change the name of the virtual environment add `--prompt name`_
+
+4. Activate the virtual environment 
+   * Windows: ``.\.venv\Scripts\activate``
+   * Linux: ``source ./.venv/Scripts/activate``
+   
+   To disable the virtual environment:
+   * Windows command prompt: ``.\.venv\Scripts\deactivate``
+   * Any other shell: `` deactivate``
+5. Return to the project root `cd ..`
+
+#### 3. Install the dependencies
+
+```bash
+pip install -r backend\requirements.txt
+```
+
+#### 4. Run flask
+
+To host the webpage to localhost (127.0.0.1)
+```bash
+flask --app backend run
+```
+
+To enable debugging mode add the flag `--debug`
+
+To expose the server to all interfaces add `--host=0.0.0.0`
+
