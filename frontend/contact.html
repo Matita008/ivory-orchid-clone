@@ -11,7 +11,7 @@
 <body>
     <header>
         <!--Logo-->
-        <img class='logo' src="img/pet-animal-pets-paw-dog-cat-paws_108559.png" alt="logo">
+        <img class='logo' src="favicon.ico" alt="logo">
 
         <!--navigation bar-->
         <nav class='navbar'>
@@ -24,10 +24,34 @@
                 <li><a href="contact.html">Contact us</a></li>
             </ul>
         </nav>
-        <a class="cta" href=" #"><button>Adopt Now</button></a> <!--'cta' -> Call to Action-->
+                <a class="cta" href="adopt.html"><button>Adopt Now</button></a> <!--'cta' -> Call to Action-->
 
     </header>
-
+    <section class="form">
+    <center>
+    <form>
+        <h1>Contact Us</h1>
+        <p>Full Name:</p>
+        <input type="text">
+        <p>Date:</p>
+        <input type="text">
+        <p>Subject:</p>
+        <select name="subject">
+            <option value="Please choose a subject"></option>
+            <option value="adopt">Adopt a pet</option>
+            <option value="volunteer">Volunteer</option>
+            <option value="donate">Make a Donation</option>
+            <option value="shelters">Shelters</option>
+            <option value="website">Website Error</option>
+            <option value="general">General Inquiry</option>
+        </select>
+        <p>Body:</p>
+        <textarea></textarea>
+        <br>
+        <input type="submit">
+    </form>
+    </center>
+    </section>
     <!--all JavaScript goes in index.js!-->
     <script src="index.js"></script>
 </body>
