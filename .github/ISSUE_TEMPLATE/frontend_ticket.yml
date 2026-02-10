@@ -1,0 +1,9 @@
+name: Frontend Ticket
+description: Request a new frontend feature
+labels: ["frontend"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+       label: Description of the feature
