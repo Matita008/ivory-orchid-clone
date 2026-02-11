@@ -18,7 +18,10 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Setup enviroment
+      - name: Make scripts executable
+        run: chmod +x scripts/*
+
+      - name: Setup environment
         run: scripts/install
 
       - name: Run tests
