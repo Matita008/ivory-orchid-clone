@@ -4,7 +4,7 @@ cd -- "$( dirname -- "${BASH_SOURCE[0]}" )"
 cd ../backend
 
 source ./.venv/bin/activate
-flask --app=app run $@
+coverage run pytest test
 
 echo Clearing up...
 deactivate
