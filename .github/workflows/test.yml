@@ -2,8 +2,8 @@ name: Test backend
 
 on:
   push:
-  pull_request:
     branches: [main]
+  pull_request:
 
 jobs:
   test:
@@ -11,7 +11,13 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
       - name: Setup enviroment
         run: scripts/install
 
@@ -19,7 +25,7 @@ jobs:
         run: scripts/test
 
       - name: Upload report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: coverage-report
           path: backend/htmlcov/*
