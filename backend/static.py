@@ -3,7 +3,7 @@ from flask import request
 from flask import send_file
 from jinja2 import TemplateNotFound
 
-from werkzeug.utils import safe_join
+from werkzeug.security import safe_join
 import os
 
 from . import app
@@ -20,7 +20,8 @@ TEMPLATE_404 = "404.html"
 #The 404 static version of the page (fallback if the template version does not work)
 FILE_404 = "404.html"
 
-#Add here all the pages that have a different endpoint from the page name
+#Add here all the pages that have a different e
+# ndpoint from the page name
 @app.route("/")
 def main_page():
 	return get_page_or_template("index.html", default="The site is currently unavailable (maybe it's in maintenance?)\ncode: index404")
