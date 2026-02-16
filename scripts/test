@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+cd -- "$( dirname -- "${BASH_SOURCE[0]}" )"
+cd ../backend
+
+source ./.venv/bin/activate
+coverage run --source app,test -m pytest test
+
+echo Saving report as html file in "$(pwd)"/htmlcov/
+coverage html
+
+echo Clearing up...
+deactivate

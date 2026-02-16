@@ -1,0 +1,9 @@
+name: Backend Ticket
+description: Request a new backend feature
+labels: ["backend"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+       label: Description of the feature

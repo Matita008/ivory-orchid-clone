@@ -1,0 +1,36 @@
+name: Bug Report
+title: "[Bug]: "
+description: File a bug report
+labels: [bug]
+
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Issue
+      description: Explain what the problem is
+
+  - type: textarea
+    id: intended-behavior
+    attributes:
+      label: Expected Behavior
+      description: Explain what you expected to happen
+      placeholder: A brief description of the expected behavior
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else
+      description: Insert here anything that can be useful
+      placeholder: ex. logs, screenshots, stacktraces
+
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Submission
+      description: Check the boxes to confirm that you have read the lines below.
+      options:
+        - label: I have updated to the latest commit to make sure my issue has not been fixed.
+          required: true
+        - label: I have searched the closed and open issues to make sure that this problem has not already been reported.
+          required: true

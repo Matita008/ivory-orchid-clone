@@ -30,17 +30,33 @@
 
     </header>
 
-    <!--hero banner starts here-->
-    <div class="hero-image"> <!--we should come up with an eye catching style for this-->
-        <img src="img\dogandcat.jpg" alt="Dog and cat" class="hero-photo">
-        <div class="hero-text">
-            <h1>Ivory Orchid</h1>
-            <p>Every pet deserves a home.</p>
-            <a href="adopt.html"><button>Adopt a Pet!</button></a>
-            <!--maybe adding a background image would be nice??-->
-        </div>
-    </div>
-
+    <!--adopt form-->
+       <h1>Adopt Form</h1>
+        <h3>Welcome to the adoption interest form. Please fill out the required fields below and you will be contacted from an Ivory Orchid staff within 1 business day.</h3>
+<section class="form" id="adoptform">
+    <center>
+    <form>
+ 
+        
+        <label for="fname">Full Name:</label>
+        <input type="text" class="fname" name="fname" required>
+        <label for="fdate">Today's Date:</label>
+        <input type="text" class="fdate" name="fdate" required>
+        <label for="femail">Your Personal Email (gmail preferred):</label>
+        <input type="email" class="femail" name="femail" required>
+        <label for="fselect">Pet Type:</label>
+        <select class="fselect" name="fselect">
+            <option value="Please choose a pet type"></option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+        </select>
+        <label type="fmessagebody">Pet Name and Description:</label>
+        <textarea></textarea>
+        <br>
+        <input type="submit">
+    </form>
+    </center>
+    </section>
 
 
 
