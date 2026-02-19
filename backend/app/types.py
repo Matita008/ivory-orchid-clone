@@ -55,6 +55,6 @@ class Pet(Jsonifable):
 				"\",\"age\":" + str(self.age) +
 				",\"description\":\"n" + self.description +
 				"\",\"size\":" + str(self.size) +
-				"	,\"image\":\"" + self.image_path +
+				",\"image\":\"" + self.image_path +
 				"\",\"animal\":\"" + self.animal +
 				status)
